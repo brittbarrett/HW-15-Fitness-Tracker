@@ -58,11 +58,22 @@ const workoutSchema = new Schema({
 //5. add apiroutes
 //6. debug it all (found out we need totalDuration so did that)
 
-workoutSchema.methods.setTotalDuration = function () {
-  this.totalDuration = 0; //`${this.firstName} ${this.lastName}`;
+// workoutSchema.methods.setTotalDuration = function () {
+//   console.log(this);
+//   //console.log(JSON.stringify(this.exercises));
+//   const allExercise = this.exercises.map((workout) => workout.exercises);
+//   //console.log(allExercise);
 
-  return this.totalDuration;
-};
+//   //console.log(allExercise[0][0].duration);
+//   const sum = allExercise.reduce(
+//     (sum, workout) => sum + workout[0].duration,
+//     0
+//   );
+//   //console.log(sum);
+//   this.totalDuration = sum; // this.exercises[0].duration;
+
+//   return this.totalDuration;
+// };
 
 const Workout = mongoose.model("Workout", workoutSchema);
 

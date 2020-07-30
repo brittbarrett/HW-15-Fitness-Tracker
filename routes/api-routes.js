@@ -34,7 +34,8 @@ router.put("/api/workouts/:id", (req, res) => {
 
 router.post("/api/workouts", (req, res) => {
   const user = new Workout(req.body);
-  user.setTotalDuration();
+  // user.setTotalDuration(user);
+  //console.log(user.exercises[0]);
 
   Workout.create(user)
     .then((dbObj) => {
